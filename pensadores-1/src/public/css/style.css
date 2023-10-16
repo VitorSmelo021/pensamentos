@@ -1,0 +1,111 @@
+*{
+    background-color: #1C1B1B;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.botoes{
+    display: flex;
+    gap: 25px;
+    margin-right: 20px;
+}
+
+.botoes a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+img{
+    margin-left: 30px;
+}
+.pensar{
+    color: #068FFF;
+}
+.linha{
+    background-color: white;
+    height: 2px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+.pensadores{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* Cadastro */
+
+main{
+    height: 45rem;
+    margin-top: 3rem;
+}
+
+.cadastro{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.linha-azul{
+    background-color: #068FFF;
+    width: 5px;
+    height: 45px;
+    
+}
+
+
+
+.registrar{
+    display: flex;
+    justify-content: center;
+    margin-right: 330px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 30px;
+    gap: 5px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 468px;
+    
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.forms input{
+    border: rgb(255, 255, 255) 1px solid;
+    padding: 8px;
+}
+
+.forms input::placeholder{
+    font-size: 16px;
+}
+
+.cadastrar{
+    width: 150px;
+    border: #068FFF solid 2px;
+    background-color: none;
+    color: #068FFF;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.link{
+    color: #068FFF;
+}

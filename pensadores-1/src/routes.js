@@ -1,4 +1,5 @@
 const express = require("express");
+const ThoughtsController = require("./controllers/ThoughtsController");
 
 const UsersController = require("./controllers/UsersController");
 
@@ -10,5 +11,9 @@ router.get("/users/:id", UsersController.findUser);
 router.put("/users/:id", UsersController.updateUser)
 router.delete("/users/:id", UsersController.deleteUser)
 
+
+// Rotas Pensamentos
+
+router.post("/thoughts", ThoughtsController.createThought);
 
 module.exports = router;
