@@ -19,7 +19,7 @@ GET http://localhost:3333/users/2
 
 
 ###
-PUT http://localhost:3333/users/4
+PUT http://localhost:3333/users/1
 content-type: application/json
 
 {
@@ -31,7 +31,7 @@ content-type: application/json
 
 ###
 
-DELETE  http://localhost:3333/users/3
+DELETE  http://localhost:3333/users/1
 
 ###
 
@@ -39,6 +39,28 @@ POST http://localhost:3333/thoughts
 content-type: application/json
 
 {
-    "title": "Pensamento 01",
+    "title": "Pensamento 08",
     "description": " Pensamento do dia"
 }
+
+###
+
+GET http://localhost:3333/thoughts
+
+###
+
+GET http://localhost:3333/thoughts/5
+
+###
+
+PUT http://localhost:3333/thoughts/5
+content-type: application/json
+
+{
+    "title": "Pensamento 03",
+    "description": " Pensamento do dia"
+}
+
+###
+
+DELETE  http://localhost:3333/thoughts/5

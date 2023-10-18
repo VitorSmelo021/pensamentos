@@ -15,5 +15,8 @@ router.delete("/users/:id", UsersController.deleteUser)
 // Rotas Pensamentos
 
 router.post("/thoughts", ThoughtsController.createThought);
-
+router.get("/thoughts", ThoughtsController.findALLThoughts);
+router.get("/thoughts/:id", ThoughtsController.findOneThoughts);
+router.put("/thoughts/:id", ThoughtsController.updateThoughts)
+router.delete("/thoughts/:id", ThoughtsController.deleteThoughts)
 module.exports = router;
