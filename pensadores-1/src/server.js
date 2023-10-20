@@ -1,6 +1,6 @@
 const express = require("express")
-const router = require("./routes")
 const exphbs = require("express-handlebars");
+const path = require('path')
 
 require("./database/index");
 
@@ -9,20 +9,25 @@ app.use(express.json());
 
 app.use(express.urlencoded({extended: true}))
 
+// Importar as rotas
+const thoughtRoutes = require("./routes/thoughtsRoutes");
+const usersRoutes = require("./routes/usersRoutes");
+
 // Importando engine handlebars
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
 
-app.use(express.static('public'))
 
-app.use(router);
+app.set("views", path.join(__dirname, "views/"))
 
-app.get('/home', (request,response) => {
-    return response.render('home')
+app.use(express.static(__dirname + '/public'))
+
+exphbs.create({
+    partialDir: path.join(__dirname, "views/partials")
 })
 
-app.get('/cadastro', (request,response) => {
-    return response.render('cadastro')
-})
+app.use(thoughtRoutes);
+app.use(usersRoutes);
+
 
 app.listen(3333, console.log("Servidor ta pegando na porta 3333 moral😎👍"))

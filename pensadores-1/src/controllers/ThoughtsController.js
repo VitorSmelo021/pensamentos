@@ -1,6 +1,12 @@
 const Thought = require("../model/Thought");
 
 module.exports = {
+    async dahsboard(request, response){
+        // Função responsável por renderizar a página de dashboard
+        return response.render("thoughts/dashboard");
+    },
+
+
     // funcao respnsavel por buscar todos os pensamentos cadastrado
     async findALLThoughts(request, response) {
         const thoughts = await Thought.findAll({ raw: true})
