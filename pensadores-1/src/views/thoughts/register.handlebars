@@ -5,8 +5,20 @@
         </div>
 
         <div class="form">
-            <form action="">
-                
+            <form action="/thoughts/create" method="POST">
+                <div class="form-field">
+                    <label for="title">Título:</label>
+                    <input type="text" name="title" placeholder="Insira um titulo">
+                </div>
+
+                <div class="form-field">
+                    <label for="description">Descrição:</label>
+                    <input type="text" name="description" placeholder="Insira uma descrição">
+                </div>
+
+                <div class="form-button">
+                    <button type="submit">Criar Pensamento</button>
+                </div>
             </form>
         </div>
     </div>
